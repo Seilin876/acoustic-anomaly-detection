@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Project-specific outputs
+output_parquet/
+Anomaly_Detection_Results.csv
+*.parquet
+
+# Raw data (will be published separately as releases / data folder)
+*.xlsx
+*.csv
+!requirements.txt
