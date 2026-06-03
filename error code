@@ -1,0 +1,92 @@
+(venv) PS D:\code\acoustic-anomaly-detection> pip install -r requirements.txt
+Collecting pandas>=2.0 (from -r requirements.txt (line 1))
+  Downloading pandas-3.0.3-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Collecting scikit-learn>=1.3 (from -r requirements.txt (line 2))
+  Using cached scikit_learn-1.9.0-cp312-cp312-win_amd64.whl.metadata (11 kB)
+Collecting pyarrow>=14.0 (from -r requirements.txt (line 3))
+  Using cached pyarrow-24.0.0-cp312-cp312-win_amd64.whl.metadata (3.0 kB)
+Collecting openpyxl>=3.1 (from -r requirements.txt (line 4))
+  Using cached openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting numpy>=1.26.0 (from pandas>=2.0->-r requirements.txt (line 1))
+  Downloading numpy-2.4.6-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
+Collecting python-dateutil>=2.8.2 (from pandas>=2.0->-r requirements.txt (line 1))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting tzdata (from pandas>=2.0->-r requirements.txt (line 1))
+  Downloading tzdata-2026.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting scipy>=1.10.0 (from scikit-learn>=1.3->-r requirements.txt (line 2))
+  Using cached scipy-1.17.1-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Collecting joblib>=1.4.0 (from scikit-learn>=1.3->-r requirements.txt (line 2))
+  Using cached joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+Collecting narwhals>=2.0.1 (from scikit-learn>=1.3->-r requirements.txt (line 2))
+  Using cached narwhals-2.22.0-py3-none-any.whl.metadata (15 kB)
+Collecting threadpoolctl>=3.5.0 (from scikit-learn>=1.3->-r requirements.txt (line 2))
+  Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting et-xmlfile (from openpyxl>=3.1->-r requirements.txt (line 4))
+  Using cached et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas>=2.0->-r requirements.txt (line 1))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading pandas-3.0.3-cp312-cp312-win_amd64.whl (9.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.8/9.8 MB 508.0 kB/s eta 0:00:00
+Using cached scikit_learn-1.9.0-cp312-cp312-win_amd64.whl (8.2 MB)
+Using cached pyarrow-24.0.0-cp312-cp312-win_amd64.whl (27.4 MB)
+Using cached openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+Using cached joblib-1.5.3-py3-none-any.whl (309 kB)
+Using cached narwhals-2.22.0-py3-none-any.whl (453 kB)
+Downloading numpy-2.4.6-cp312-cp312-win_amd64.whl (12.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 1.2 MB/s eta 0:00:00
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached scipy-1.17.1-cp312-cp312-win_amd64.whl (36.5 MB)
+Using cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Using cached et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Downloading tzdata-2026.2-py2.py3-none-any.whl (349 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: tzdata, threadpoolctl, six, pyarrow, numpy, narwhals, joblib, et-xmlfile, scipy, python-dateutil, openpyxl, scikit-learn, pandas
+Successfully installed et-xmlfile-2.0.0 joblib-1.5.3 narwhals-2.22.0 numpy-2.4.6 openpyxl-3.1.5 pandas-3.0.3 pyarrow-24.0.0 python-dateutil-2.9.0.post0 scikit-learn-1.9.0 scipy-1.17.1 six-1.17.0 threadpoolctl-3.6.0 tzdata-2026.2
+
+[notice] A new release of pip is available: 25.0.1 -> 26.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(venv) PS D:\code\acoustic-anomaly-detection> python anomaly_detection.py
+D:\code\acoustic-anomaly-detection\anomaly_detection.py:9: SyntaxWarning: invalid escape sequence '\c'
+  SOURCE_DIR = "D:\code\acoustic-anomaly-detection\data"  # 替換為您的 Excel 資料夾路徑
+No models met the sample size threshold or no anomalies detected.
+(venv) PS D:\code\acoustic-anomaly-detection> python anomaly_detection.py
+Converting: ./data\Daily_Summary_20260401.xlsx -> Parquet
+Traceback (most recent call last):
+  File "D:\code\acoustic-anomaly-detection\anomaly_detection.py", line 101, in <module>
+    parquet_files = convert_to_parquet(SOURCE_DIR, OUTPUT_DIR)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\acoustic-anomaly-detection\anomaly_detection.py", line 42, in convert_to_parquet
+    df.to_parquet(out_path, engine='pyarrow', compression='snappy')
+  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\pandas\core\frame.py", line 3135, in to_parquet
+    return to_parquet(
+           ^^^^^^^^^^^
+  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\pandas\io\parquet.py", line 490, in to_parquet
+    impl.write(
+  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\pandas\io\parquet.py", line 191, in write
+    table = self.api.Table.from_pandas(df, **from_pandas_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/table.pxi", line 4768, in pyarrow.lib.Table.from_pandas
+    arrays, schema, n_rows = dataframe_to_arrays(
+  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 664, in dataframe_to_arrays
+    arrays[i] = maybe_fut.result()
+                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shanglin.tien\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shanglin.tien\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\shanglin.tien\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 639, in convert_column
+    raise e
+  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 633, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/array.pxi", line 390, in pyarrow.lib.array
+    result = _ndarray_to_array(values, mask, type, c_from_pandas, safe,
+  File "pyarrow/array.pxi", line 91, in pyarrow.lib._ndarray_to_array
+    check_status(NdarrayToArrow(pool, values, mask, from_pandas,
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+    raise convert_status(status)
+pyarrow.lib.ArrowInvalid: ("Could not convert '12.00' with type str: tried to convert to int64", 'Conversion failed for column Voltage with type object')
