@@ -1,0 +1,57 @@
+# ============================================================
+# Model Groups Configuration / 機種分組設定
+# ============================================================
+# 在執行 anomaly_detection.py 之前，請在這裡設定要分析的機種，
+# 並把「特性相同」的機種放在同一個群組內。
+#
+# Set up which models to analyze before running anomaly_detection.py.
+# Put models that share acoustic characteristics into the same group.
+#
+# ------------------------------------------------------------
+# Format / 格式
+# ------------------------------------------------------------
+#   GroupName = Model1, Model2, Model3, ...
+#
+# Rules / 規則:
+#   - 每行一個群組 (one group per line)
+#   - 用 "=" 分隔群組名稱與機種列表
+#   - 機種名稱用逗號分隔；機種名稱本身包含的空白會被保留
+#   - 同一群組內的機種會被視為相同的聲學家族 (Acoustic_Family) 一起建模
+#   - 不同群組會個別建模
+#   - 未列在任何群組的機種會被略過 (不分析)
+#   - 以 "#" 開頭的行為註解，空行會被忽略
+#
+# Example / 範例:
+#   GroupA = A1, A2
+#   GroupB = B2, B5, B7
+#
+# ------------------------------------------------------------
+# 你的資料目前包含以下機種 (請依特性整理到下方的群組中)：
+# Models found in your data (assign each to a group below):
+#
+#   36204AFK11
+#   36204AGK11
+#   36204AJP11
+#   36204G1711
+#   36204H6711
+#   FFB0412UHN-CH68
+#   FFB0412UHNFFE
+#   FFB0412UHNFSW B
+#   PFM0448GN-00VK6
+#   TAA0412CD-AF83 A
+#   TAA0412DDX01VPN F
+#   TAA0412DDX01VXW F
+#
+# 註：資料中還有 "PauseOrFreeRun" 與空值 (nan) 等非機種記錄，
+# 只要未列入下方群組，就會被自動略過。
+# ============================================================
+
+# ------------------------------------------------------------
+# 在下方加入你的群組設定 (移除 # 並依實際需求修改)
+# Add your groups below (uncomment and edit as needed)
+# ------------------------------------------------------------
+
+# Family_36204 = 36204AFK11, 36204AGK11, 36204AJP11, 36204G1711, 36204H6711
+# Family_FFB   = FFB0412UHN-CH68, FFB0412UHNFFE, FFB0412UHNFSW B
+# Family_TAA   = TAA0412CD-AF83 A, TAA0412DDX01VPN F, TAA0412DDX01VXW F
+# Family_PFM   = PFM0448GN-00VK6

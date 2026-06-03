@@ -16,11 +16,55 @@ warnings.filterwarnings("ignore", category=RuntimeWarning,
 SOURCE_DIR = "./"  # 替換為您的 Excel 資料夾路徑
 OUTPUT_DIR = "./output_parquet"
 RESULTS_CSV = "Anomaly_Detection_Results.csv"
+MODEL_GROUPS_FILE = "model_groups.txt"  # 機種分組設定檔
 
 FREQ_BANDS = ['500.0', '630.0', '800.0', '1000.0', '1250.0', '1600.0',
               '2000.0', '2500.0', '3150.0', '4000.0', '5000.0', '6300.0',
               '8000.0', '10000.0']
 CORE_METRICS = ['dB(A)', 'index1', 'index2', 'index3', 'RPM']
+
+
+def load_model_groups(config_path):
+    """讀取 'GroupName = Model1, Model2, ...' 格式的設定檔，回傳 {model: group} 字典。"""
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(
+            f"設定檔 '{config_path}' 不存在。請建立此檔並用 "
+            f"'GroupName = Model1, Model2' 格式列出要分析的機種群組。"
+        )
+
+    mapping = {}
+    with open(config_path, 'r', encoding='utf-8') as f:
+        for lineno, raw in enumerate(f, 1):
+            line = raw.strip()
+            if not line or line.startswith('#'):
+                continue
+            if '=' not in line:
+                print(f"  Warning: 第 {lineno} 行無 '=' 符號，已略過: {line!r}")
+                continue
+            group, models = line.split('=', 1)
+            group = group.strip()
+            models = [m.strip() for m in models.split(',') if m.strip()]
+            if not group or not models:
+                print(f"  Warning: 第 {lineno} 行群組名或機種列表為空，已略過")
+                continue
+            for m in models:
+                if m in mapping and mapping[m] != group:
+                    print(f"  Warning: 機種 '{m}' 同時出現在 '{mapping[m]}' 與 '{group}'，"
+                          f"以 '{group}' 為準")
+                mapping[m] = group
+
+    if not mapping:
+        raise ValueError(
+            f"設定檔 '{config_path}' 沒有定義任何群組。"
+            f"請至少加入一行 'GroupName = Model1, Model2'。"
+        )
+
+    n_groups = len(set(mapping.values()))
+    print(f"Loaded {len(mapping)} models across {n_groups} group(s) from {config_path}:")
+    for group_name in sorted(set(mapping.values())):
+        members = [m for m, g in mapping.items() if g == group_name]
+        print(f"  - {group_name}: {', '.join(members)}")
+    return mapping
 
 def convert_to_parquet(source_dir, output_dir):
     """將 Excel 或 CSV 轉換為 Parquet 以提升後續 I/O 效能"""
@@ -57,7 +101,7 @@ def convert_to_parquet(source_dir, output_dir):
 
     return parquet_paths
 
-def run_anomaly_pipeline(parquet_files):
+def run_anomaly_pipeline(parquet_files, model_to_group):
     """執行 PCA + Isolation Forest 管線"""
     all_results = []
 
@@ -65,8 +109,17 @@ def run_anomaly_pipeline(parquet_files):
         print(f"Processing {file}...")
         df = pd.read_parquet(file)
 
-        # 建立聲學家族映射 (此處簡化，您可依需求載入 JSON)
-        df['Acoustic_Family'] = df['Model_Name'].astype(str)
+        # 依設定檔將 Model_Name 映射到 Acoustic_Family (群組名)
+        df['Acoustic_Family'] = df['Model_Name'].astype(str).map(model_to_group)
+        skipped = df[df['Acoustic_Family'].isna()]
+        if len(skipped):
+            unmapped = sorted(skipped['Model_Name'].astype(str).unique())
+            print(f"  Skipped {len(skipped)} rows from {len(unmapped)} unconfigured "
+                  f"model(s): {unmapped}")
+        df = df.dropna(subset=['Acoustic_Family'])
+        if df.empty:
+            print(f"  No rows match the configured model groups in {file}; skipping.")
+            continue
 
         # 分層處理
         grouped = df.groupby(['Acoustic_Family', 'Line_Name', 'Device_ID'])
@@ -115,5 +168,6 @@ def run_anomaly_pipeline(parquet_files):
         print("No models met the sample size threshold or no anomalies detected.")
 
 if __name__ == "__main__":
+    model_to_group = load_model_groups(MODEL_GROUPS_FILE)
     parquet_files = convert_to_parquet(SOURCE_DIR, OUTPUT_DIR)
-    run_anomaly_pipeline(parquet_files)
+    run_anomaly_pipeline(parquet_files, model_to_group)

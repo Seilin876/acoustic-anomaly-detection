@@ -41,15 +41,24 @@ pip install -r requirements.txt
 ### 使用方式
 
 1. 將你的 `.csv` 或 `.xlsx` 量測檔放到專案根目錄（或修改 `SOURCE_DIR`）。
-2. 執行：
+2. **設定 `model_groups.txt`** — 列出要分析的機種與分組，格式為：
+
+   ```
+   # 同一群組的機種會被視為相同聲學家族一起建模
+   # 不同群組會個別建模；未列入的機種會被略過
+   Family_FFB = FFB0412UHN-CH68, FFB0412UHNFFE, FFB0412UHNFSW B
+   Family_TAA = TAA0412CD-AF83 A, TAA0412DDX01VXW F
+   ```
+
+3. 執行：
 
    ```bash
    python anomaly_detection.py
    ```
 
-3. 輸出：
+4. 輸出：
    - `./output_parquet/`：原始檔轉換後的 Parquet 快取。
-   - `Anomaly_Detection_Results.csv`：僅包含被判定為異常 (`Anomaly_Flag == -1`) 的資料列，附帶 `Anomaly_Score` 與 `PCA_Components`。
+   - `Anomaly_Detection_Results.csv`：僅包含被判定為異常 (`Anomaly_Flag == -1`) 的資料列，附帶 `Anomaly_Score`、`PCA_Components` 與 `Acoustic_Family`（你在設定檔指定的群組名）。
 
 ### 參數調整
 
@@ -60,6 +69,7 @@ pip install -r requirements.txt
 | `SOURCE_DIR` | `./` | 原始資料夾路徑 |
 | `OUTPUT_DIR` | `./output_parquet` | Parquet 快取資料夾 |
 | `RESULTS_CSV` | `Anomaly_Detection_Results.csv` | 異常結果輸出檔名 |
+| `MODEL_GROUPS_FILE` | `model_groups.txt` | 機種分組設定檔路徑 |
 | `FREQ_BANDS` | 14 段 1/3 倍頻程 | 頻譜欄位名稱 |
 | `CORE_METRICS` | 5 項核心指標 | 非頻譜的關鍵特徵 |
 | `PCA n_components` | `0.90` | 保留變異比例 |
@@ -103,15 +113,24 @@ pip install -r requirements.txt
 ### Usage
 
 1. Drop your `.csv` / `.xlsx` files into the project root (or edit `SOURCE_DIR`).
-2. Run:
+2. **Configure `model_groups.txt`** — list which `Model_Name` values to analyze and how to group them:
+
+   ```
+   # Models in the same group are treated as one acoustic family
+   # Different groups are modelled separately; unlisted models are skipped
+   Family_FFB = FFB0412UHN-CH68, FFB0412UHNFFE, FFB0412UHNFSW B
+   Family_TAA = TAA0412CD-AF83 A, TAA0412DDX01VXW F
+   ```
+
+3. Run:
 
    ```bash
    python anomaly_detection.py
    ```
 
-3. Outputs:
+4. Outputs:
    - `./output_parquet/`: Parquet cache of the raw input files.
-   - `Anomaly_Detection_Results.csv`: rows flagged as anomalies (`Anomaly_Flag == -1`), enriched with `Anomaly_Score` and `PCA_Components`.
+   - `Anomaly_Detection_Results.csv`: rows flagged as anomalies (`Anomaly_Flag == -1`), enriched with `Anomaly_Score`, `PCA_Components`, and `Acoustic_Family` (the group name you set in the config).
 
 ### Configuration
 
@@ -122,6 +141,7 @@ All knobs live at the top of `anomaly_detection.py`:
 | `SOURCE_DIR` | `./` | Folder containing the raw files |
 | `OUTPUT_DIR` | `./output_parquet` | Where Parquet caches are written |
 | `RESULTS_CSV` | `Anomaly_Detection_Results.csv` | Output file name |
+| `MODEL_GROUPS_FILE` | `model_groups.txt` | Path to the model-groups config file |
 | `FREQ_BANDS` | 14 one-third-octave bands | Spectrum column names |
 | `CORE_METRICS` | 5 core metrics | Non-spectral features |
 | `PCA n_components` | `0.90` | Variance ratio to retain |
@@ -133,14 +153,16 @@ All knobs live at the top of `anomaly_detection.py`:
 ## Pipeline at a glance
 
 ```
-raw .csv / .xlsx
-       │
-       ▼
- convert_to_parquet()  ──►  ./output_parquet/*.parquet
-       │
-       ▼
- groupby(Acoustic_Family, Line_Name, Device_ID)
-       │
+raw .csv / .xlsx                  model_groups.txt
+       │                                 │
+       ▼                                 ▼
+ convert_to_parquet()  ──►  filter & map Model_Name → Acoustic_Family
+       │                                 │
+       └──────────────►◄─────────────────┘
+                       │
+                       ▼
+       groupby(Acoustic_Family, Line_Name, Device_ID)
+                       │
        ├── FREQ_BANDS  ──► RobustScaler ──► PCA(0.90)  ┐
        │                                                ├── concat ──► IsolationForest
        └── CORE_METRICS ──► RobustScaler ──────────────┘            │
