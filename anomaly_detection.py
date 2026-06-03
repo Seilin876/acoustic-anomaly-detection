@@ -1,9 +1,16 @@
 import os
 import glob
+import warnings
+import numpy as np
 import pandas as pd
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import RobustScaler
 from sklearn.ensemble import IsolationForest
+
+# sklearn PCA 在內部 SVD/matmul 路徑會偶發 RuntimeWarning（已知的 numpy FP 旗標互動，
+# 結果仍正確）。輸入已用 nan_to_num 防禦過 inf/NaN，這裡僅抑制噪音。
+warnings.filterwarnings("ignore", category=RuntimeWarning,
+                        module=r"sklearn\.decomposition\._base")
 
 # --- 參數設定 (Configuration) ---
 SOURCE_DIR = "./"  # 替換為您的 Excel 資料夾路徑
@@ -38,7 +45,14 @@ def convert_to_parquet(source_dir, output_dir):
         else:
             df = pd.read_excel(file, sheet_name=0)
 
+        # 1. 強制欄位名稱為字串
         df.columns = df.columns.astype(str)
+
+        # 2. 強制解決 PyArrow Schema 型別衝突 (Type Coercion)
+        # 產線資料常有髒數據，將所有物件型態強制轉為字串，滿足 Parquet 儲存規範
+        for col in df.select_dtypes(include=['object']).columns:
+            df[col] = df[col].astype(str)
+
         df.to_parquet(out_path, engine='pyarrow', compression='snappy')
 
     return parquet_paths
@@ -65,6 +79,8 @@ def run_anomaly_pipeline(parquet_files):
             X_freq = group[FREQ_BANDS].apply(pd.to_numeric, errors='coerce').fillna(0)
             scaler_freq = RobustScaler()
             X_freq_scaled = scaler_freq.fit_transform(X_freq)
+            # 群組內常數欄位會讓 RobustScaler 產生 inf (IQR=0)，需替換為 0 避免 PCA 數值爆掉
+            X_freq_scaled = np.nan_to_num(X_freq_scaled, nan=0.0, posinf=0.0, neginf=0.0)
 
             pca = PCA(n_components=0.90, random_state=42) # 保留 90% 變異
             X_pca = pca.fit_transform(X_freq_scaled)
@@ -74,6 +90,7 @@ def run_anomaly_pipeline(parquet_files):
             X_core = group[CORE_METRICS].apply(pd.to_numeric, errors='coerce').fillna(0)
             scaler_core = RobustScaler()
             X_core_scaled = scaler_core.fit_transform(X_core)
+            X_core_scaled = np.nan_to_num(X_core_scaled, nan=0.0, posinf=0.0, neginf=0.0)
             df_core_scaled = pd.DataFrame(X_core_scaled, index=group.index)
 
             # 3. 特徵融合與模型訓練
