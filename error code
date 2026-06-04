@@ -4,47 +4,58 @@ Loaded 136 models across 4 group(s) from model_groups.txt:
   - Family_C216_2425: 36204F0511, 36204ALQ11, 36204AC411, 36204D6511, 36204F6311, 36204G0611, 36204F1511, 36204H8311, 36204H8411, 36204AQ911, 36204AJ511, 36204B5911, 36204AV011, 36204C7811, 36204H6411, 36204AU411, 36204AMG11, 36204AFK11, FFB0412EN-00VRT, 36204ANN11, FFB0412EN-00W2W, 36204B8411, 36204F8311, 36204ACF11, 36204D9011, 36204AVH11, 36204AQY11, 36204AGK11, 36204AGP11, FFB0412EN-00XYH, FFB0412EN-00K81, 36204AFB11, FFB0412EN-00DN9, 36204ARD11, 3620405M11, 36204AV811, 36204AWT11, 36204ATY11, 36204B4011, 36204APU11, FFB0412EN-00Y0Z, FFB0412EN-00ZDJ, 36204AAA11, 36204AVJ11, 36204ARY11, 36204AQN11, 36204AVK11, 3620405J11, 36204A7111, 36204AK411, 36204ANC11, 36204AQM11, 36204ANB11, 36204AW411, 3620405F11, 36204B6111, 36204C7711, 36204AJG11, 36204AJ011, FFB0412EN-00XXT, 36204AKK11, 36204ARJ11, 3620405U11, FFB0412EN-00GTY, 36204AFY11, FFB0412EN-00V5R, 36204G9211, 36204AB511, 36204K4511, 36204D4811, 36204D3411, 36204D7211, 36204AR411, 36204ARK11, FFB0412EN-00V88, 36204AM611, 36204AFH11, 36204AGQ11, 36204AHH11, 36204G0411, 36204G2811, 36204F3311, 36204C7311, 36204C5511, 36204ARL11, 36204AN311, 36204AP311, 36204AQV11, 36204AHV11, 36204AJ411, FFB0412EN-00V18, 36204C7111, 36204C8711, 36204AWM11, 36204ADH11, 36204B0711, 36204ATA11, 36204ARW11, 36204ADC11, 36204AH911, 36204AYW11, 36204C0611, 36204D8711, 36204H3411, 36204H8211, FFB0412EN-00ZPT, FFB0412EN-00WBS, FFB0412EN-00DR8, FFB0412EN-00W1U, 36204B7711, 36204K5111, 36204G6611, 36204B6411, 36204AVV11, 36204ALT11, 36204ANR11, 36204ABV11, 36204AKF11, 36204D6911, 36204F0011, 36204B4211
   - Family_C216_2757: 36204AM511, 36204AWV11, 36204AMD11, 3620405L11, 3620403S11, 36204ABM11, 36204G4911, 36204ALP11, FFB0412EN-00V6Y
   - Family_C216_2978: FFB0412EN-00WGY, FFB0412EN-00ZFJ, FFB0412EN-00V9G, FFB0412EN-00VVV, FFB0412EN-00VGT
-Converting: .\Daily_Summary_20260529.xlsx -> Parquet
-D:\code\acoustic-anomaly-detection\anomaly_detection.py:97: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
-See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
-  for col in df.select_dtypes(include=['object']).columns:
-Converting: .\Daily_Summary_20260530.xlsx -> Parquet
-D:\code\acoustic-anomaly-detection\anomaly_detection.py:97: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
-See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
-  for col in df.select_dtypes(include=['object']).columns:
-Processing ./output_parquet\Daily_Summary_20260529.parquet...
-Traceback (most recent call last):
-  File "D:\code\acoustic-anomaly-detection\anomaly_detection.py", line 173, in <module>
-    run_anomaly_pipeline(parquet_files, model_to_group)
-  File "D:\code\acoustic-anomaly-detection\anomaly_detection.py", line 116, in run_anomaly_pipeline
-    unmapped = sorted(skipped['Model_Name'].astype(str).unique())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: '<' not supported between instances of 'float' and 'str'
-(venv) PS D:\code\acoustic-anomaly-detection> python anomaly_detection.py
-Loaded 136 models across 4 group(s) from model_groups.txt:
-  - CH68: FFB0412UHN-CH68
-  - Family_C216_2425: 36204F0511, 36204ALQ11, 36204AC411, 36204D6511, 36204F6311, 36204G0611, 36204F1511, 36204H8311, 36204H8411, 36204AQ911, 36204AJ511, 36204B5911, 36204AV011, 36204C7811, 36204H6411, 36204AU411, 36204AMG11, 36204AFK11, FFB0412EN-00VRT, 36204ANN11, FFB0412EN-00W2W, 36204B8411, 36204F8311, 36204ACF11, 36204D9011, 36204AVH11, 36204AQY11, 36204AGK11, 36204AGP11, FFB0412EN-00XYH, FFB0412EN-00K81, 36204AFB11, FFB0412EN-00DN9, 36204ARD11, 3620405M11, 36204AV811, 36204AWT11, 36204ATY11, 36204B4011, 36204APU11, FFB0412EN-00Y0Z, FFB0412EN-00ZDJ, 36204AAA11, 36204AVJ11, 36204ARY11, 36204AQN11, 36204AVK11, 3620405J11, 36204A7111, 36204AK411, 36204ANC11, 36204AQM11, 36204ANB11, 36204AW411, 3620405F11, 36204B6111, 36204C7711, 36204AJG11, 36204AJ011, FFB0412EN-00XXT, 36204AKK11, 36204ARJ11, 3620405U11, FFB0412EN-00GTY, 36204AFY11, FFB0412EN-00V5R, 36204G9211, 36204AB511, 36204K4511, 36204D4811, 36204D3411, 36204D7211, 36204AR411, 36204ARK11, FFB0412EN-00V88, 36204AM611, 36204AFH11, 36204AGQ11, 36204AHH11, 36204G0411, 36204G2811, 36204F3311, 36204C7311, 36204C5511, 36204ARL11, 36204AN311, 36204AP311, 36204AQV11, 36204AHV11, 36204AJ411, FFB0412EN-00V18, 36204C7111, 36204C8711, 36204AWM11, 36204ADH11, 36204B0711, 36204ATA11, 36204ARW11, 36204ADC11, 36204AH911, 36204AYW11, 36204C0611, 36204D8711, 36204H3411, 36204H8211, FFB0412EN-00ZPT, FFB0412EN-00WBS, FFB0412EN-00DR8, FFB0412EN-00W1U, 36204B7711, 36204K5111, 36204G6611, 36204B6411, 36204AVV11, 36204ALT11, 36204ANR11, 36204ABV11, 36204AKF11, 36204D6911, 36204F0011, 36204B4211
-  - Family_C216_2757: 36204AM511, 36204AWV11, 36204AMD11, 3620405L11, 3620403S11, 36204ABM11, 36204G4911, 36204ALP11, FFB0412EN-00V6Y
-  - Family_C216_2978: FFB0412EN-00WGY, FFB0412EN-00ZFJ, FFB0412EN-00V9G, FFB0412EN-00VVV, FFB0412EN-00VGT
-Processing ./output_parquet\Daily_Summary_20260529.parquet...
-Traceback (most recent call last):
-  File "D:\code\acoustic-anomaly-detection\anomaly_detection.py", line 173, in <module>
-    run_anomaly_pipeline(parquet_files, model_to_group)
-  File "D:\code\acoustic-anomaly-detection\anomaly_detection.py", line 111, in run_anomaly_pipeline
-    df['Model_Name'] = df['Model_Name'].filena('UNKNOWN_MODEL').astype(str)
-                       ^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\pandas\core\generic.py", line 6206, in __getattr__
-    return object.__getattribute__(self, name)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'Series' object has no attribute 'filena'. Did you mean: 'fillna'?
-(venv) PS D:\code\acoustic-anomaly-detection> python anomaly_detection.py
-Loaded 136 models across 4 group(s) from model_groups.txt:
-  - CH68: FFB0412UHN-CH68
-  - Family_C216_2425: 36204F0511, 36204ALQ11, 36204AC411, 36204D6511, 36204F6311, 36204G0611, 36204F1511, 36204H8311, 36204H8411, 36204AQ911, 36204AJ511, 36204B5911, 36204AV011, 36204C7811, 36204H6411, 36204AU411, 36204AMG11, 36204AFK11, FFB0412EN-00VRT, 36204ANN11, FFB0412EN-00W2W, 36204B8411, 36204F8311, 36204ACF11, 36204D9011, 36204AVH11, 36204AQY11, 36204AGK11, 36204AGP11, FFB0412EN-00XYH, FFB0412EN-00K81, 36204AFB11, FFB0412EN-00DN9, 36204ARD11, 3620405M11, 36204AV811, 36204AWT11, 36204ATY11, 36204B4011, 36204APU11, FFB0412EN-00Y0Z, FFB0412EN-00ZDJ, 36204AAA11, 36204AVJ11, 36204ARY11, 36204AQN11, 36204AVK11, 3620405J11, 36204A7111, 36204AK411, 36204ANC11, 36204AQM11, 36204ANB11, 36204AW411, 3620405F11, 36204B6111, 36204C7711, 36204AJG11, 36204AJ011, FFB0412EN-00XXT, 36204AKK11, 36204ARJ11, 3620405U11, FFB0412EN-00GTY, 36204AFY11, FFB0412EN-00V5R, 36204G9211, 36204AB511, 36204K4511, 36204D4811, 36204D3411, 36204D7211, 36204AR411, 36204ARK11, FFB0412EN-00V88, 36204AM611, 36204AFH11, 36204AGQ11, 36204AHH11, 36204G0411, 36204G2811, 36204F3311, 36204C7311, 36204C5511, 36204ARL11, 36204AN311, 36204AP311, 36204AQV11, 36204AHV11, 36204AJ411, FFB0412EN-00V18, 36204C7111, 36204C8711, 36204AWM11, 36204ADH11, 36204B0711, 36204ATA11, 36204ARW11, 36204ADC11, 36204AH911, 36204AYW11, 36204C0611, 36204D8711, 36204H3411, 36204H8211, FFB0412EN-00ZPT, FFB0412EN-00WBS, FFB0412EN-00DR8, FFB0412EN-00W1U, 36204B7711, 36204K5111, 36204G6611, 36204B6411, 36204AVV11, 36204ALT11, 36204ANR11, 36204ABV11, 36204AKF11, 36204D6911, 36204F0011, 36204B4211
-  - Family_C216_2757: 36204AM511, 36204AWV11, 36204AMD11, 3620405L11, 3620403S11, 36204ABM11, 36204G4911, 36204ALP11, FFB0412EN-00V6Y
-  - Family_C216_2978: FFB0412EN-00WGY, FFB0412EN-00ZFJ, FFB0412EN-00V9G, FFB0412EN-00VVV, FFB0412EN-00VGT
-Processing ./output_parquet\Daily_Summary_20260529.parquet...
-  Skipped 27943 rows from 10 unconfigured model(s): ['36204AJP11', '36204G1711', '36204H6711', 'FFB0412UHNFFE', 'PFM0448GN-00VK6', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'TAA0412DDX01VPN F', 'TAA0412DDX01VXW F', 'UNKNOWN_MODEL']
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260401.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260402.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260403.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260404.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260406.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260407.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260408.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260409.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260410.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260411.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260413.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260414.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260415.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260416.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260417.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260418.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260420.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260421.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260422.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260423.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260424.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260425.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260427.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260428.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260429.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260430.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260501.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260504.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260505.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260506.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260507.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260508.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260509.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260510.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260511.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260512.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260513.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260514.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260515.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260516.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260518.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260519.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260520.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260521.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260522.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260523.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260525.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260526.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260527.xlsx -> Parquet
+Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260528.xlsx -> Parquet
+Processing ./output_parquet\Daily_Summary_20260401.parquet...
+  Skipped 21314 rows from 8 unconfigured model(s): ['36204A7911', '36204B6311', '36204G1711', '36204G3811', 'EFB0412VHD-CVPS F', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'UNKNOWN_MODEL']
 Traceback (most recent call last):
   File "D:\code\acoustic-anomaly-detection\anomaly_detection.py", line 173, in <module>
     run_anomaly_pipeline(parquet_files, model_to_group)
