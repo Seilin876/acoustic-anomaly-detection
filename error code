@@ -4,100 +4,110 @@ Loaded 136 models across 4 group(s) from model_groups.txt:
   - Family_C216_2425: 36204F0511, 36204ALQ11, 36204AC411, 36204D6511, 36204F6311, 36204G0611, 36204F1511, 36204H8311, 36204H8411, 36204AQ911, 36204AJ511, 36204B5911, 36204AV011, 36204C7811, 36204H6411, 36204AU411, 36204AMG11, 36204AFK11, FFB0412EN-00VRT, 36204ANN11, FFB0412EN-00W2W, 36204B8411, 36204F8311, 36204ACF11, 36204D9011, 36204AVH11, 36204AQY11, 36204AGK11, 36204AGP11, FFB0412EN-00XYH, FFB0412EN-00K81, 36204AFB11, FFB0412EN-00DN9, 36204ARD11, 3620405M11, 36204AV811, 36204AWT11, 36204ATY11, 36204B4011, 36204APU11, FFB0412EN-00Y0Z, FFB0412EN-00ZDJ, 36204AAA11, 36204AVJ11, 36204ARY11, 36204AQN11, 36204AVK11, 3620405J11, 36204A7111, 36204AK411, 36204ANC11, 36204AQM11, 36204ANB11, 36204AW411, 3620405F11, 36204B6111, 36204C7711, 36204AJG11, 36204AJ011, FFB0412EN-00XXT, 36204AKK11, 36204ARJ11, 3620405U11, FFB0412EN-00GTY, 36204AFY11, FFB0412EN-00V5R, 36204G9211, 36204AB511, 36204K4511, 36204D4811, 36204D3411, 36204D7211, 36204AR411, 36204ARK11, FFB0412EN-00V88, 36204AM611, 36204AFH11, 36204AGQ11, 36204AHH11, 36204G0411, 36204G2811, 36204F3311, 36204C7311, 36204C5511, 36204ARL11, 36204AN311, 36204AP311, 36204AQV11, 36204AHV11, 36204AJ411, FFB0412EN-00V18, 36204C7111, 36204C8711, 36204AWM11, 36204ADH11, 36204B0711, 36204ATA11, 36204ARW11, 36204ADC11, 36204AH911, 36204AYW11, 36204C0611, 36204D8711, 36204H3411, 36204H8211, FFB0412EN-00ZPT, FFB0412EN-00WBS, FFB0412EN-00DR8, FFB0412EN-00W1U, 36204B7711, 36204K5111, 36204G6611, 36204B6411, 36204AVV11, 36204ALT11, 36204ANR11, 36204ABV11, 36204AKF11, 36204D6911, 36204F0011, 36204B4211
   - Family_C216_2757: 36204AM511, 36204AWV11, 36204AMD11, 3620405L11, 3620403S11, 36204ABM11, 36204G4911, 36204ALP11, FFB0412EN-00V6Y
   - Family_C216_2978: FFB0412EN-00WGY, FFB0412EN-00ZFJ, FFB0412EN-00V9G, FFB0412EN-00VVV, FFB0412EN-00VGT
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260401.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260402.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260403.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260404.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260406.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260407.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260408.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260409.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260410.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260411.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260413.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260414.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260415.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260416.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260417.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260418.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260420.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260421.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260422.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260423.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260424.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260425.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260427.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260428.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260429.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260430.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260501.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260504.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260505.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260506.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260507.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260508.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260509.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260510.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260511.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260512.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260513.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260514.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260515.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260516.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260518.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260519.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260520.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260521.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260522.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260523.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260525.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260526.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260527.xlsx -> Parquet
-Converting: D:\code\acoustic-anomaly-detection\data\Daily_Summary_20260528.xlsx -> Parquet
 Processing ./output_parquet\Daily_Summary_20260401.parquet...
   Skipped 21314 rows from 8 unconfigured model(s): ['36204A7911', '36204B6311', '36204G1711', '36204G3811', 'EFB0412VHD-CVPS F', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'UNKNOWN_MODEL']
-Traceback (most recent call last):
-  File "D:\code\acoustic-anomaly-detection\anomaly_detection.py", line 173, in <module>
-    run_anomaly_pipeline(parquet_files, model_to_group)
-  File "D:\code\acoustic-anomaly-detection\anomaly_detection.py", line 155, in run_anomaly_pipeline
-    group_copy['Anomaly_Flag'] = clf.fit_predict(X_final) # -1 為異常，1 為正常
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\sklearn\base.py", line 1191, in fit_predict
-    return self.fit(X, **kwargs).predict(X)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\sklearn\base.py", line 1403, in wrapper
-    return fit_method(estimator, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\sklearn\ensemble\_iforest.py", line 320, in fit
-    X = validate_data(
-        ^^^^^^^^^^^^^^
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\sklearn\utils\validation.py", line 3013, in validate_data
-    _check_feature_names(_estimator, X, reset=reset)
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\sklearn\utils\validation.py", line 2803, in _check_feature_names
-    feature_names_in = _get_feature_names(X)
-                       ^^^^^^^^^^^^^^^^^^^^^
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\sklearn\utils\validation.py", line 2361, in _get_feature_names
-    feature_names = np.asarray(nw.from_native(X).columns, dtype=object)
-                               ^^^^^^^^^^^^^^^^^
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\narwhals\stable\v2\__init__.py", line 484, in from_native
-    return _from_native_impl(  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\narwhals\translate.py", line 370, in _from_native_impl
-    .compliant.from_native(native_object)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\narwhals\_compliant\namespace.py", line 260, in from_native
-    return self._dataframe.from_native(data, context=self)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\narwhals\_pandas_like\dataframe.py", line 235, in from_native
-    return cls(
-           ^^^^
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\narwhals\_pandas_like\dataframe.py", line 118, in __init__
-    check_column_names_are_unique(native_dataframe.columns)
-  File "D:\code\acoustic-anomaly-detection\venv\Lib\site-packages\narwhals\_utils.py", line 1476, in check_column_names_are_unique
-    raise DuplicateError(msg)
-narwhals.exceptions.DuplicateError: Expected unique column names, got:
-- '0' 2 times
-- '1' 2 times
-- '2' 2 times
-- '3' 2 times
-- '4' 2 times
+Processing ./output_parquet\Daily_Summary_20260402.parquet...
+  Skipped 27150 rows from 8 unconfigured model(s): ['36204A7911', '36204B6311', '36204G1711', '36204G3711', '36204G3811', 'EFB0412VHD-CVPS F', 'PauseOrFreeRun', 'TAA0412CD-AF83 A']
+Processing ./output_parquet\Daily_Summary_20260403.parquet...
+  Skipped 26438 rows from 10 unconfigured model(s): ['36204A7911', '36204B6311', '36204G1711', '36204G3711', 'EFB0412VHD-CVPS F', 'FFB0412EHN-DJ08 W', 'FFB0412EN-00K5U', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260404.parquet...
+  Skipped 14809 rows from 8 unconfigured model(s): ['36204AGV11', '36204APG11', '36204G1711', '36204G3711', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'TAA0412CD-BD1A A']
+Processing ./output_parquet\Daily_Summary_20260406.parquet...
+  Skipped 13325 rows from 7 unconfigured model(s): ['36204APG11', '36204G1711', '36204G3711', 'EFB0412VHD-CVPS F', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-BD1A A']
+Processing ./output_parquet\Daily_Summary_20260407.parquet...
+  Skipped 18989 rows from 9 unconfigured model(s): ['36204APG11', '36204C1411', '36204G1711', '36204G3711', 'EFB0412VHD-CVPS F', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-BD1A A', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260408.parquet...
+  Skipped 22223 rows from 8 unconfigured model(s): ['36204A9411', '36204G1711', '36204G3711', 'EFB0412VHD-CVPS F', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-BD1A A', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260409.parquet...
+  Skipped 22435 rows from 7 unconfigured model(s): ['36204A9411', '36204G1711', '36204G3711', 'EFB0412VHD-CVPS F', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-BD1A A']
+Processing ./output_parquet\Daily_Summary_20260410.parquet...
+  Skipped 22327 rows from 11 unconfigured model(s): ['36204A9411', '36204AR211', '36204D9911', '36204G1711', '36204G3711', '36204J4611', 'EFB0412VHD-CVPS F', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-BD1A A', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260411.parquet...
+  Skipped 16877 rows from 11 unconfigured model(s): ['36204AY811', '36204G1711', '36204G3711', '36204G3811', '36204J4611', 'EFB0412VHD-CVPS', 'EFB0412VHD-CVPS F', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-BD1A A', 'TFA0412CNZHG C']
+Processing ./output_parquet\Daily_Summary_20260413.parquet...
+  Skipped 20421 rows from 7 unconfigured model(s): ['36204AY811', '36204G1711', '36204G3811', 'EFB0412VHD-CVPS', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TFA0412CNZHG C']
+Processing ./output_parquet\Daily_Summary_20260414.parquet...
+  Skipped 26770 rows from 9 unconfigured model(s): ['36204AY811', '36204G1711', '36204G3811', 'EFB0412VHD-CVPS', 'EFB0412VHD-CVXA F', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-DC2E A', 'TFA0412CNZHG C']
+Processing ./output_parquet\Daily_Summary_20260415.parquet...
+  Skipped 23944 rows from 10 unconfigured model(s): ['36204A7911', '36204AJP11', '36204AY811', '36204G1711', '36204G3811', 'AFB0412SHBYQB', 'EFB0412VHD-CVXA F', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-DC2E A']
+Processing ./output_parquet\Daily_Summary_20260416.parquet...
+  Skipped 35065 rows from 10 unconfigured model(s): ['36204A7911', '36204AJP11', '36204G1711', '36204G3811', 'AFB0412SHBYQB', 'EFB0412VHD-CVXA F', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-DC2E A', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260417.parquet...
+  Skipped 33634 rows from 12 unconfigured model(s): ['36204A7911', '36204AF611', '36204AHK11', '36204AJP11', '36204G1711', '36204G3811', 'EFB0412VHD-CVA2 F', 'EFB0412VHD-CVXA F', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-BD1A A', 'TAA0412CD-DC2E A']
+Processing ./output_parquet\Daily_Summary_20260418.parquet...
+  Skipped 26751 rows from 10 unconfigured model(s): ['36204AF611', '36204AHK11', '36204AQW11', '36204G1711', '36204G3711', '36204G3811', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-BD1A A', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260420.parquet...
+  Skipped 12541 rows from 11 unconfigured model(s): ['3620478111', '36204A7911', '36204APG11', '36204AQW11', '36204G1711', '36204G3711', 'FFB0412EHN-DJ08 W', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'TAA0412CD-BD1A A', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260421.parquet...
+  Skipped 21304 rows from 10 unconfigured model(s): ['3620478111', '36204A5511', '36204AAS11', '36204APG11', '36204G1711', '36204G3711', '36204H1711', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260422.parquet...
+  Skipped 25693 rows from 11 unconfigured model(s): ['3620478111', '36204A5511', '36204AAS11', '36204ANM11', '36204G1711', '36204G3711', '36204H1711', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'TAA0412CD-BD1A A', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260423.parquet...
+  Skipped 25838 rows from 9 unconfigured model(s): ['3620478111', '36204A5511', '36204G1711', '36204G3711', '36204H1711', 'FFB0412UHN-CY6W', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260424.parquet...
+  Skipped 24261 rows from 8 unconfigured model(s): ['36204A5511', '36204G1711', '36204G3711', '36204G3811', '36204H1711', 'FFB0412UHN-CY6W', 'PauseOrFreeRun', 'TAA0412CD-AF83 A']
+Processing ./output_parquet\Daily_Summary_20260425.parquet...
+  Skipped 22550 rows from 8 unconfigured model(s): ['36204A5511', '36204G1711', '36204G3811', '36204H1711', 'FA121A04-P05 C', 'FFB0412UHN-CY6W', 'PauseOrFreeRun', 'TAA0412CD-AF83 A']
+Processing ./output_parquet\Daily_Summary_20260427.parquet...
+  Skipped 19823 rows from 10 unconfigured model(s): ['36204A5511', '36204G1711', '36204G3811', '36204H1711', 'FA121A04-P05 C', 'FFB0412UHN-BC2EA12', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'TAA0412CD-BD1A A', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260428.parquet...
+  Skipped 37366 rows from 10 unconfigured model(s): ['36204A5511', '36204AR211', '36204G1711', '36204G3811', '36204H1711', 'FA121A04-P05 C', 'FFB0412EN-00K5U', 'FFB0412UHN-BC2EA12', 'PauseOrFreeRun', 'TAA0412CD-BD1A A']
+Processing ./output_parquet\Daily_Summary_20260429.parquet...
+  Skipped 39098 rows from 12 unconfigured model(s): ['36204A9411', '36204AK511', '36204AR211', '36204G1711', '36204G3811', '36204H1711', 'FA121A04-P05 C', 'FFB0412EN-00K5U', 'FFB0412UHN-BC2EA12', 'FFB0412UHN-CALW', 'PauseOrFreeRun', 'TAA0412CD-BD1A A']
+  No rows match the configured model groups in ./output_parquet\Daily_Summary_20260429.parquet; skipping.
+Processing ./output_parquet\Daily_Summary_20260430.parquet...
+  Skipped 34271 rows from 12 unconfigured model(s): ['36204A9411', '36204C1211', '36204G1711', '36204G3711', '36204G3811', '36204H1711', 'FA121A04-P05 C', 'FFB0412EN-00K5U', 'FFB0412UHN-BC2EA12', 'PauseOrFreeRun', 'TAA0412CD-BD1A A', 'TAA0412DDX01W2P F']
+Processing ./output_parquet\Daily_Summary_20260501.parquet...
+  Skipped 28718 rows from 10 unconfigured model(s): ['36204AJP11', '36204AY811', '36204C1211', '36204G1711', '36204G3711', 'FA121A04-M02 C', 'FA121A04-P05 C', 'PauseOrFreeRun', 'TAA0412CD-BD1A A', 'TAA0412DDX01W2P F']
+Processing ./output_parquet\Daily_Summary_20260504.parquet...
+  Skipped 16685 rows from 11 unconfigured model(s): ['36204AGV11', '36204AJP11', '36204AY811', '36204G1711', '36204G3711', '36204H1711', 'FA121A04-M02 C', 'FA121A04-P70 C', 'PauseOrFreeRun', 'TAA0412CD-BD1A A', 'TAA0412DDX01W2P F']
+Processing ./output_parquet\Daily_Summary_20260505.parquet...
+  Skipped 24927 rows from 10 unconfigured model(s): ['36204AGV11', '36204AJP11', '36204G1711', '36204G3711', '36204H1711', 'PauseOrFreeRun', 'TAA0412CD-BD1A A', 'TAA0412CD-DC2E A', 'TAA0412DDX01W2P F', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260506.parquet...
+  Skipped 25062 rows from 7 unconfigured model(s): ['36204AGV11', '36204G1711', '36204G3711', '36204H1711', 'PauseOrFreeRun', 'TAA0412CD-DC2E A', 'TAA0412DDX01W2P F']
+Processing ./output_parquet\Daily_Summary_20260507.parquet...
+  Skipped 23822 rows from 10 unconfigured model(s): ['36204AAS11', '36204AGV11', '36204G1711', '36204G3711', '36204H1711', 'EFB0412HHDFAT C', 'PauseOrFreeRun', 'TAA0412CD-DC2E A', 'TAA0412CDEJ9', 'TAA0412DDX01W2P F']
+Processing ./output_parquet\Daily_Summary_20260508.parquet...
+  Skipped 22521 rows from 13 unconfigured model(s): ['36204AAS11', '36204ANM11', '36204C3111', '36204G1711', '36204G3711', '36204G3811', '36204H1611', '36204H1711', 'EFB0412HHDFAT C', 'PauseOrFreeRun', 'TAA0412DDX01W2P F', 'TFA0412CNJTP M', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260509.parquet...
+  Skipped 23917 rows from 8 unconfigured model(s): ['36204AGJ11', '36204ANM11', '36204G1711', '36204G3811', 'EFB0412HHDFAT C', 'FFB0412EN-00K5U', 'PauseOrFreeRun', 'TAA0412DDX01W2P F']
+Processing ./output_parquet\Daily_Summary_20260510.parquet...
+  Skipped 2406 rows from 1 unconfigured model(s): ['FFB0412EN-00K5U']
+  No rows match the configured model groups in ./output_parquet\Daily_Summary_20260510.parquet; skipping.
+Processing ./output_parquet\Daily_Summary_20260511.parquet...
+  Skipped 18172 rows from 10 unconfigured model(s): ['3620499411', '36204AGJ11', '36204G3811', '36204H1611', 'EFB0412HHDHGN', 'FFB0412EN-00K5U', 'FFB0412VN-00VFE', 'PauseOrFreeRun', 'TAA0412DDX01W2P F', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260512.parquet...
+  Skipped 29685 rows from 11 unconfigured model(s): ['3620499311', '3620499411', '36204A5511', '36204ALH11', '36204G1711', '36204G3811', 'EFB0412HHDHGN', 'FFB0412EN-00K5U', 'FFB0412VN-00VFE', 'PauseOrFreeRun', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260513.parquet...
+  Skipped 23208 rows from 11 unconfigured model(s): ['3620478111', '3620499311', '36204A5511', '36204AHK11', '36204AL711', '36204AY811', '36204G1711', '36204G3811', 'EFB0412HHDHGN', 'FFB0412EN-00K5U', 'PauseOrFreeRun']
+Processing ./output_parquet\Daily_Summary_20260514.parquet...
+  Skipped 28559 rows from 11 unconfigured model(s): ['3620478111', '36204AHK11', '36204AL711', '36204ALA11', '36204ALH11', '36204AY811', '36204G1711', '36204G3811', 'EFB0412HHDFAT C', 'EFB0412HHDHGN', 'PauseOrFreeRun']
+Processing ./output_parquet\Daily_Summary_20260515.parquet...
+  Skipped 29007 rows from 12 unconfigured model(s): ['3620478111', '36204AHK11', '36204ALA11', '36204ALH11', '36204B6311', '36204G1711', '36204G3711', '36204G3811', 'AFB0412SHB70V', 'EFB0412HHDFAT C', 'FFB0412UHNECQ', 'PauseOrFreeRun']
+Processing ./output_parquet\Daily_Summary_20260516.parquet...
+  Skipped 19687 rows from 7 unconfigured model(s): ['36204AHK11', '36204B6311', '36204G1711', '36204G3711', 'EFB0412HHDFAT C', 'FFB0412UHNECQ', 'PauseOrFreeRun']
+Processing ./output_parquet\Daily_Summary_20260518.parquet...
+  Skipped 16279 rows from 8 unconfigured model(s): ['36204B6311', '36204G3711', 'AFB0412SHBFF1', 'AFB0412SHBKHV', 'EFB0412HHDFAT C', 'FFB0412EN-00K5U', 'FFB0412UHNECQ', 'PauseOrFreeRun']
+Processing ./output_parquet\Daily_Summary_20260519.parquet...
+  Skipped 20470 rows from 10 unconfigured model(s): ['36204B6311', '36204G1711', '36204G3711', '36204H1711', 'AFB0412SHBKHV', 'EFB0412HHDFAT C', 'FFB0412EN-00K5U', 'FFB0412UHNECQ', 'FFB0412UHNFFE', 'PauseOrFreeRun']
+Processing ./output_parquet\Daily_Summary_20260520.parquet...
+  Skipped 23780 rows from 8 unconfigured model(s): ['36204B6311', '36204G1711', '36204H1711', 'AFB0412SHBKHV', 'EFB0412HHDHGN', 'FFB0412EN-00K5U', 'FFB0412UHNFFE', 'PauseOrFreeRun']
+Processing ./output_parquet\Daily_Summary_20260521.parquet...
+  Skipped 22276 rows from 8 unconfigured model(s): ['36204B6311', '36204G1711', '36204H1711', 'AFB0412SHBKHV', 'EFB0412HHDHGN', 'FFB0412UHNFFE', 'PauseOrFreeRun', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260522.parquet...
+  Skipped 22889 rows from 9 unconfigured model(s): ['36204G1711', '36204H1711', 'AFB0412SHBKHV', 'EFB0412HHDHGN', 'FFB0412UHNFFE', 'PauseOrFreeRun', 'TAA0412DDX01W2P F', 'THA0412ADX06', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260523.parquet...
+  Skipped 19516 rows from 7 unconfigured model(s): ['36204G1711', '36204H1711', 'EFB0412HHDHGN', 'FFB0412EN-00K5U', 'FFB0412UHNFFE', 'PauseOrFreeRun', 'TAA0412DDX01W2P F']
+Processing ./output_parquet\Daily_Summary_20260525.parquet...
+  Skipped 12159 rows from 11 unconfigured model(s): ['36204A8811', '36204G1711', 'AFB0412SHBKHV', 'EFB0412HHDHGN', 'FFB0412UHNFFE', 'PFM0448GN-00VK6', 'PauseOrFreeRun', 'TAA0412DDX01VPN', 'TAA0412DDX01W2P F', 'TFA0412CNZHG C', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260526.parquet...
+  Skipped 18863 rows from 7 unconfigured model(s): ['36204G1711', 'FFB0412UHNFFE', 'PFM0448GN-00VK6', 'PauseOrFreeRun', 'TAA0412DDX01VPN', 'TFA0412CNZHG C', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260527.parquet...
+  Skipped 17296 rows from 10 unconfigured model(s): ['36204G1711', 'FFB0412UHNFFE', 'PFM0448GN-00VK6', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'TAA0412DDX01VPN', 'TAA0412DDX01VPN F', 'TFA0412CNKRV', 'TFA0412CNZHG C', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260528.parquet...
+  Skipped 23152 rows from 8 unconfigured model(s): ['36204G1411', '36204G1711', 'FFB0412UHNFFE', 'PFM0448GN-00VK6', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'TAA0412DDX01VPN F', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260529.parquet...
+  Skipped 27943 rows from 10 unconfigured model(s): ['36204AJP11', '36204G1711', '36204H6711', 'FFB0412UHNFFE', 'PFM0448GN-00VK6', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'TAA0412DDX01VPN F', 'TAA0412DDX01VXW F', 'UNKNOWN_MODEL']
+Processing ./output_parquet\Daily_Summary_20260530.parquet...
+  Skipped 24385 rows from 8 unconfigured model(s): ['36204AJP11', '36204G1711', '36204H6711', 'FFB0412UHNFFE', 'FFB0412UHNFSW B', 'PauseOrFreeRun', 'TAA0412CD-AF83 A', 'TAA0412DDX01VXW F']
+Done. Detected 22776 anomalies. Results saved to Anomaly_Detection_Results.csv
